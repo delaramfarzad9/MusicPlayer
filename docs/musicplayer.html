@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>musicPlayer</title>
+    <link rel="stylesheet" href="./styles/app.css">
+   
+</head>
+<body class="flex  items-center justify-center  bg-gradient-to-r from-gray-900 to-blue-800 font-LeagueSpartan-Medium">
+    <svg class="hidden">
+        <symbol id="play"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+          </symbol>
+          <symbol id="forward" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
+          </symbol>
+          <symbol id="backward" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+          </symbol>
+          <symbol id="pause" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811Z" />
+          </symbol>
+          
+          
+          
+          
+    </svg>
+   
+<!-- music player------ -->
+<!-- <div class="bg-container fixed -top-1/2 -left-1/2 ">
+  <img src="" alt="" id="background">
+</div> -->
+<div class="relative flex flex-col items-center justify-between w-80 h-80 rounded-full bg-blue-950 overflow-hidden border-8 border-amber-400">
+     <!-- Upper Half Circle with Image --> 
+     <div class="absolute w-80 h-1/2 ">
+         <img id="cover" class="w-full h-full object-fill" src="" alt="cover">
+         </div>
+         <div class=" absolute bottom-28 flex flex-row gap-20 items-center text-amber-400 ">
+            <h2 id="title" class="hover:text-amber-200  font-LeagueSpartan-Black"></h2>
+            <h3 id="artist" class="hover:text-amber-200 "></h3>
+         </div> 
+         <audio src=""></audio>
+         
+          <!-- Border Between Image and Controls -->
+           <div class="border-t-2 border-amber-400 w-full absolute top-1/2">
+
+           </div> 
+             <!-- Progress -->
+         <div class="progress-container h-1 w-[60%] bg-amber-400/50 absolute bottom-20 rounded cursor-pointer text-amber-600 font-LeagueSpartan-ExtraLight text-xs" id="progress-container">
+            <div class="progress bg-amber-700 rounded h-full w-[0%] " id="progress"></div>
+            <div class="duration-wrapper relative -top-5 flex flex-row justify-between">
+                <span id="current-time"></span>
+                <span id="duration"></span>
+            </div>
+        </div> 
+           <!-- Controls in the Lower Half -->
+            <div id="controls" class="absolute flex flex-row items-center justify-center space-x-4 bottom-5 w-full">
+          <div id="prev" class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-400 duration-200 hover:text-white hover:scale-110 shadow-md  transition-all cursor-pointer"> 
+             <svg class="w-4 h-4"> 
+                   <use href="#backward"></use> </svg>
+                 </div> 
+                 <div id="plays" class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-400 duration-200 hover:text-white hover:scale-110 shadow-md  transition-all cursor-pointer"> 
+                    <svg class="w-4 h-4"> <use href="#play"></use> </svg> 
+                </div>
+                <div id="play-pause" class="hidden  items-center justify-center w-8 h-8 rounded-full bg-amber-400 duration-200 hover:text-white hover:scale-110 shadow-md  transition-all cursor-pointer"> 
+                  <svg class="w-4 h-4"> <use href="#pause"></use> </svg> 
+              </div>
+                 <div id="next" class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-400 duration-200 hover:text-white hover:scale-110 shadow-md  transition-all cursor-pointer"> 
+                    <svg class="w-4 h-4"> <use href="#forward"></use> </svg> 
+                </div>
+             </div>
+                 </div>
+
+                 <script src="./scripts/music.js"></script>
+</body>
+</html>

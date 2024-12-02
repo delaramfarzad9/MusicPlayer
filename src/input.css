@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    @font-face{
+        font-family: "LeagueSpartan-Bold";
+        src:url("../fonts/LeagueSpartan-Bold.ttf")format("truetype");
+        font-display: swap ;
+    }
+    @font-face{
+        font-family: "LeagueSpartan-ExtraLight";
+        src:url("../fonts/LeagueSpartan-ExtraLight.ttf")format("truetype");
+        font-display: swap ;
+    }
+    @font-face{
+        font-family: "LeagueSpartan-Black";
+        src:url("../fonts/LeagueSpartan-Black.ttf")format("truetype");
+        font-display: swap ;
+    }
+    @font-face{
+        font-family: "LeagueSpartan-Medium";
+        src:url("../fonts/LeagueSpartan-Medium.ttf")format("truetype");
+        font-display: swap ;
+    }
+    @font-face{
+        font-family: "LeagueSpartan-Regular";
+        src:url("../fonts/LeagueSpartan-Regular.ttf")format("truetype");
+        font-display: swap ;
+    }
+    @font-face{
+        font-family: "LeagueSpartan-SemiBold";
+        src:url("../fonts/LeagueSpartan-SemiBold.ttf")format("truetype");
+        font-display: swap ;
+    }
+}
